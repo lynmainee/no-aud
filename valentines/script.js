@@ -1,0 +1,30 @@
+const question = document.querySelector(".question");
+const gif = document.querySelector(".gif");
+const yesBtn = document.querySelector(".yes-btn");
+const noBtn = document.querySelector(".no-btn");
+
+let scaleFactor = 1.0;
+
+yesBtn.addEventListener("click", () => {
+ 
+   
+  question.innerHTML = "Yay! HEHEHEHHEHEHE.<br>I love you, my forever valentine <3";
+  gif.src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExemxxaHduN2hybTVxYmtuMzdmNnMza3hka3lrdWdzeWg3ZzZjcmozMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/65wE7Exx1eKZGYIP0G/giphy.gif";
+  yesBtn.style.display = "none"; 
+  noBtn.style.display = "none";
+});
+
+noBtn.addEventListener("mouseover", () => {
+  const noBtnRect = noBtn.getBoundingClientRect();
+  const maxX = window.innerWidth - noBtnRect.width;
+  const maxY = window.innerHeight - noBtnRect.height;
+
+  const randomX = Math.floor(Math.random() * maxX);
+  const randomY = Math.floor(Math.random() * maxY);
+
+  noBtn.style.left = randomX + "px";
+  noBtn.style.top = randomY + "px";
+
+  scaleFactor += 0.1;
+  yesBtn.style.transform = `scale(${scaleFactor})`;
+});
