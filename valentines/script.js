@@ -9,7 +9,7 @@ yesBtn.addEventListener("click", () => {
  
    
   question.innerHTML = "Yay! HEHEHEHHEHEHE.<br>I love you, my forever valentine <3";
-  gif.src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExemxxaHduN2hybTVxYmtuMzdmNnMza3hka3lrdWdzeWg3ZzZjcmozMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/65wE7Exx1eKZGYIP0G/giphy.gif";
+  gif.src = "giphy (1).gif";
   yesBtn.style.display = "none"; 
   noBtn.style.display = "none";
 });
